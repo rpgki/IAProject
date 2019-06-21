@@ -158,11 +158,11 @@ predAct3 = clf.predict(Act3)
 # The next part is pseudo code
 if story == 'red':
     print("Red Story With Model")
-elif story == 'black'
+elif story == 'black':
     print("Black Story With Model")
-elif story == 'white'
+elif story == 'white':
     print("White Story With Model")
-elif story == 'green'
+elif story == 'green':
     print("Green Story With Model")
-elif story == 'blue'
+elif story == 'blue':
     print("Blue Story With Model")

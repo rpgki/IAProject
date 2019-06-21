@@ -7,8 +7,8 @@ from sklearn.linear_model import LogisticRegression
 # The dataset is created within the main program
 # Creation of dataframe with input features
 raw_X = {
-    'Character': ['Ajani','Ajani','Ajani','Angrath','Angrath','Arlinn','Arlinn','Arlinn','Arlinn','Ashiok','Chandra','Chandra','Chandra','Chandra','Chandra','Davriel','Domri','Domri','Dovin','Dovin','Gideon','Gideon','Gideon','Gideon','Huatli','Huatli','Huatli','Huatli','Huatli','Jace','Jace','Jace','Jace','Jace','Jace','Jace','Jace','Jace','Jaya','Jaya','Jaya','Jaya','Jiang','Jiang','Jiang','Karn','Karn','Karn','Karn','Kasmina','Kaya','Kaya','Kaya','Kiora','Liliana','Liliana','Nahiri','Nahiri','Narset','NicolBolas','NicolBolas','NicolBolas','NicolBolas','NicolBolas','Nissa','Nissa','ObNixilis','ObNixilis','Ral','Ral','Ral','Saheeli','Saheeli','Samut','Samut','Samut','Sarkhan','Sarkhan','Sorin','Sorin','Tamiyo','Teferi','Teferi','Teferi','Teferi','Teyo','Teyo','Teyo','Teyo','Teyo','Tezzeret','Tezzeret','Tezzeret','Tezzeret','Tibalt','Ugin','Ugin','Ugin','Vivien','Vivien','Vivien','Vraska','Vraska','Vraska','Vraska']
-    ,'Act': ['Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 2','Acto 2','Acto 3','Acto 3','Acto 3','Acto 3','Acto 2','Acto 2','Acto 2','Acto 2','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 2','Acto 2','Acto 2','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 2','Acto 2','Acto 2','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 1','Acto 3','Acto 2','Acto 3','Acto 3','Acto 2','Acto 3','Acto 3','Acto 3','Acto 3','Acto 2','Acto 2','Acto 3','Acto 3','Acto 1','Acto 1','Acto 2','Acto 2','Acto 2','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 2','Acto 3','Acto 2','Acto 3','Acto 3','Acto 3','Acto 3','Acto 2','Acto 2','Acto 3','Acto 3','Acto 3','Acto 1','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 3','Acto 2','Acto 2','Acto 2','Acto 1','Acto 1','Acto 1','Acto 3']
+    'Character': [17,17,17,5,5,35,35,35,35,8,16,16,16,16,16,6,36,36,10,10,4,4,4,4,1,1,1,1,1,11,11,11,11,11,11,11,11,11,18,18,18,18,2,2,2,32,32,32,32,26,14,14,14,29,12,12,33,33,31,15,15,15,15,15,7,7,23,23,28,28,28,9,9,22,22,22,25,25,30,30,34,19,19,19,19,27,27,27,27,27,24,24,24,24,13,21,21,21,20,20,20,3,3,3,3]
+    ,'Act': [2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,1,1,1,1,2,2,2,2,2,2,2,2,2,1,1,1,2,2,2,2,2,2,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,0,2,1,2,2,1,2,2,2,2,1,1,2,2,0,0,1,1,1,2,2,2,2,2,1,2,1,2,2,2,2,1,1,2,2,2,0,2,2,2,2,2,2,2,1,1,1,0,0,0,2]
     ,'Act 1': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0]
     ,'Act 2': [0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,1,1,0,0,1,1,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0]
     ,'Act 3': [1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,0,1,1,1,1,0,0,1,1,0,0,0,0,0,1,1,1,1,1,0,1,0,1,1,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1]																																																																																																							
@@ -30,6 +30,94 @@ Y = pd.DataFrame(data=raw_y)
 # The user is asked to input the main character and story
 character = input('Input the main character: ')
 story = input('Input the color of the story: ')
+
+# The character name and story are lower case
+character = character.lower()
+story = story.lower()
+
+# A function is defined to convert strings to numbers
+def StringToNumber(character):
+    if character == 'huatli':
+        character = 1
+    elif character == 'jiang':
+        character = 2
+    elif character == 'vraska':
+        character = 3
+    elif character == 'gideon':
+        character = 4
+    elif character == 'angrath':
+        character = 5
+    elif character == 'davriel':
+        character = 6
+    elif character == 'nissa':
+        character = 7
+    elif character == 'ashiok':
+        character = 8
+    elif character == 'saheeli':
+        character = 9
+    elif character == 'dovin':
+        character = 10
+    elif character == 'jace':
+        character = 11
+    elif character == 'liliana':
+        character = 12
+    elif character == 'tibalt':
+        character = 13
+    elif character == 'kaya':
+        character = 14
+    elif character == 'nicolbolas':
+        character = 15
+    elif character == 'chandra':
+        character = 16
+    elif character == 'ajani':
+        character = 17
+    elif character == 'jaya':
+        character = 18
+    elif character == 'teferi':
+        character = 19
+    elif character == 'vivien':
+        character = 20
+    elif character == 'ugin':
+        character = 21
+    elif character == 'samut':
+        character = 22
+    elif character == 'obnixilis':
+        character = 23
+    elif character == 'tezzeret':
+        character = 24
+    elif character == 'sarkhan':
+        character = 25
+    elif character == 'kasmina':
+        character = 26
+    elif character == 'teyo':
+        character = 27
+    elif character == 'ral':
+        character = 28
+    elif character == 'kiora':
+        character = 29
+    elif character == 'sorin':
+        character = 30
+    elif character == 'narset':
+        character = 31
+    elif character == 'karn':
+        character = 32
+    elif character == 'nahiri':
+        character = 33
+    elif character == 'tamiyo':
+        character = 34
+    elif character == 'arlinn':
+        character = 35
+    elif character == 'domri':
+        character = 36
+    return character
+
+# A function is created to transform the result to string
+def NumberToString(number):
+    if number == 1:
+        rsl = 'huatli'
+    elif number == 2:
+        rsl = 
+    return rsl
 
 # The colors are set when user inputs the story
 if story == 'white':
@@ -69,7 +157,7 @@ act2 = random.randint(0,1)
 act3 = random.randint(0,1)
 
 # A function is defined to determine the ally in different acts
-def Ally():
+def Ally(act=''):
     if story == 'white' & (act == 'Acto 1' | act == 'Acto 2' | act == 'Acto 3'):
         ally = 1
     elif story == 'blue' & (act == 'Acto 1' | act == 'Acto 2' | act == 'Acto 3'):
@@ -105,11 +193,11 @@ clf = LogisticRegression(solver='sag', max_iter=100, random_state=42,
 # The values to predict are saved
 Act1_X = {
     'Character': character
-    ,'Act': 'Acto 1'
+    ,'Act': 0
     ,'Act 1': act1
     ,'Act 2': act2
     ,'Act 3': act3
-    ,'Allied': Ally()
+    ,'Allied': Ally('Acto 1')
     ,'Red': red
     ,'White': white
     ,'Black': black
@@ -119,11 +207,11 @@ Act1_X = {
 
 Act2_X = {
     'Character': character
-    ,'Act': 'Acto 2'
+    ,'Act': 1
     ,'Act 1': act1
     ,'Act 2': act2
     ,'Act 3': act3
-    ,'Allied': Ally()
+    ,'Allied': Ally('Acto 2')
     ,'Red': red
     ,'White': white
     ,'Black': black
@@ -133,11 +221,11 @@ Act2_X = {
 
 Act3_X = {
     'Character': character
-    ,'Act': 'Acto 3'
+    ,'Act': 2
     ,'Act 1': act1
     ,'Act 2': act2
     ,'Act 3': act3
-    ,'Allied': Ally()
+    ,'Allied': Ally('Acto 3')
     ,'Red': red
     ,'White': white
     ,'Black': black

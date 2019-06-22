@@ -125,61 +125,61 @@ def NumberToString(number):
         rsl = 'angrath'
     elif number == 6:
         rsl = 'davriel'
-    elif character == 7:
+    elif number == 7:
         rsl = 'nissa'
-    elif character == 8:
+    elif number == 8:
         rsl = 'ashiok'
-    elif character == 9:
+    elif number == 9:
         rsl = 'saheeli'
-    elif character == 10:
+    elif number == 10:
         rsl = 'dovin'
-    elif character == 11:
+    elif number == 11:
         rsl = 'jace'
-    elif character == 12:
+    elif number == 12:
         rsl = 'liliana'
-    elif character == 13:
+    elif number == 13:
         rsl = 'tibalt'
-    elif character == 14:
+    elif number == 14:
         rsl = 'kaya'
-    elif character == 15:
+    elif number == 15:
         rsl = 'nicolbolas'
-    elif character == 16:
-        character = 16
-    elif character == 17:
+    elif number == 16:
+        rsl = 'chandra'
+    elif number == 17:
         rsl = 'ajani'
-    elif character == 18:
+    elif number == 18:
         rsl = 'jaya'
-    elif character == 19:
+    elif number == 19:
         rsl = 'teferi'
-    elif character == 20:
+    elif number == 20:
         rsl = 'vivien'
-    elif character == 21:
+    elif number == 21:
         rsl = 'ugin'
-    elif character == 22:
+    elif number == 22:
         rsl = 'samut'
-    elif character == 23:
+    elif number == 23:
         rsl = 'obnixilis'
-    elif character == 24:
+    elif number == 24:
         rsl = 'tezzeret'
-    elif character == 25:
+    elif number == 25:
         rsl = 'sarkhan'
-    elif character == 26:
+    elif number == 26:
         rsl = 'kasmina'
-    elif character == 27:
+    elif number == 27:
         rsl = 'teyo'
-    elif character == 28:
+    elif number == 28:
         rsl = 'ral'
-    elif character == 29:
+    elif number == 29:
         rsl = 'kiora'
-    elif character == 30:
+    elif number == 30:
         rsl = 'sorin'
-    elif character == 31:
+    elif number == 31:
         rsl = 'narset'
-    elif character == 32:
+    elif number == 32:
         rsl = 'karn'
-    elif character == 33:
+    elif number == 33:
         rsl = 'nahiri'
-    elif character == 34:
+    elif number == 34:
         rsl = 'tamiyo'
     return rsl.capitalize()
 

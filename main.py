@@ -181,39 +181,7 @@ def NumberToString(number):
         rsl = 'nahiri'
     elif character == 34:
         rsl = 'tamiyo'
-    return rsl
-
-# The colors are set when user inputs the story
-if story == 'white':
-    red = 0
-    white = 1
-    blue = 0
-    black = 0
-    green = 0
-elif story == 'red':
-    red = 1
-    white = 0
-    blue = 0
-    black = 0
-    green = 0
-elif story == 'blue':
-    red = 0
-    white = 0
-    blue = 1
-    black = 0
-    green = 0
-elif story == 'black':
-    red = 0
-    white = 0
-    blue = 0
-    black = 1
-    green = 0
-elif story == 'green':
-    red = 0
-    white = 0
-    blue = 0
-    black = 0
-    green = 1
+    return rsl.capitalize()
 
 # The acts are chosen as random
 act1 = random.randint(0,1)
@@ -256,7 +224,7 @@ clf = LogisticRegression(solver='sag', max_iter=100, random_state=42,
 
 # The values to predict are saved
 Act1_X = {
-    'Character': character
+    'Character': StringToNumber(character)
     ,'Act': 0
     ,'Act 1': act1
     ,'Act 2': act2
@@ -270,7 +238,7 @@ Act1_X = {
 }
 
 Act2_X = {
-    'Character': character
+    'Character': StringToNumber(character)
     ,'Act': 1
     ,'Act 1': act1
     ,'Act 2': act2
@@ -284,7 +252,7 @@ Act2_X = {
 }
 
 Act3_X = {
-    'Character': character
+    'Character': StringToNumber(character)
     ,'Act': 2
     ,'Act 1': act1
     ,'Act 2': act2
@@ -306,10 +274,12 @@ predAct1 = clf.predict(Act1)
 predAct2 = clf.predict(Act2)
 predAct3 = clf.predict(Act3)
 
+# The number predicted is passed to a string
+
 # Then the story is told
 # The next part is pseudo code
 if story == 'red':
-    print("Red Story With Model")
+    print("Story: " + story + ", Character: " + character.capitalize() + ", Predicted: " + NumberToString(predAct1))
 elif story == 'black':
     print("Black Story With Model")
 elif story == 'white':

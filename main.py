@@ -116,7 +116,71 @@ def NumberToString(number):
     if number == 1:
         rsl = 'huatli'
     elif number == 2:
-        rsl = 
+        rsl = 'jiang'
+    elif number == 3:
+        rsl = 'vraska'
+    elif number == 4:
+        rsl = 'gideon'
+    elif number == 5:
+        rsl = 'angrath'
+    elif number == 6:
+        rsl = 'davriel'
+    elif character == 7:
+        rsl = 'nissa'
+    elif character == 8:
+        rsl = 'ashiok'
+    elif character == 9:
+        rsl = 'saheeli'
+    elif character == 10:
+        rsl = 'dovin'
+    elif character == 11:
+        rsl = 'jace'
+    elif character == 12:
+        rsl = 'liliana'
+    elif character == 13:
+        rsl = 'tibalt'
+    elif character == 14:
+        rsl = 'kaya'
+    elif character == 15:
+        rsl = 'nicolbolas'
+    elif character == 16:
+        character = 16
+    elif character == 17:
+        rsl = 'ajani'
+    elif character == 18:
+        rsl = 'jaya'
+    elif character == 19:
+        rsl = 'teferi'
+    elif character == 20:
+        rsl = 'vivien'
+    elif character == 21:
+        rsl = 'ugin'
+    elif character == 22:
+        rsl = 'samut'
+    elif character == 23:
+        rsl = 'obnixilis'
+    elif character == 24:
+        rsl = 'tezzeret'
+    elif character == 25:
+        rsl = 'sarkhan'
+    elif character == 26:
+        rsl = 'kasmina'
+    elif character == 27:
+        rsl = 'teyo'
+    elif character == 28:
+        rsl = 'ral'
+    elif character == 29:
+        rsl = 'kiora'
+    elif character == 30:
+        rsl = 'sorin'
+    elif character == 31:
+        rsl = 'narset'
+    elif character == 32:
+        rsl = 'karn'
+    elif character == 33:
+        rsl = 'nahiri'
+    elif character == 34:
+        rsl = 'tamiyo'
     return rsl
 
 # The colors are set when user inputs the story

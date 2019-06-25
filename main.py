@@ -279,11 +279,28 @@ predAct3 = clf.predict(Act3)
 # Then the story is told
 # The next part is pseudo code
 if story == 'red':
-    print("Story: " + story + ", Character: " + character.capitalize() + ", Predicted: " + NumberToString(predAct1))
+    print('Act 1 \n' +
+          'As soon as ' + character.capitalize() + ' arrive to Ravnica the fight against the invaders starts. Attacking with great passion ' + character.capitalize() + ' starts looking for allies that help him. ' + NumberToString(predAct1) + ' answers the call of our hero and together drive back some of the armies of the enemy. \n' +
+          'Act 2 \n' +
+          'As the fight continues, ' + character.capitalize() + ' get deeper in the city to seek and destroy for the device that let the enemy open and close portals that relate to other plains. Everything was smooth as ' + NumberToString(predAct2) + ' remains to screw the plan. \n' +
+          'Act 3 \n' +
+          character.capitalize() + ' manage to survive the fight and encounters face to face, the leader of the armies of invasion. While fighting with the enemy, ' + character.capitalize() + ' finds a new ally, ' + NumberToString(predAct3) + ' that helps him to get rid of the last remnants of the invasion army.')
 elif story == 'black':
-    print("Black Story With Model")
+    print('Act 1 \n' +
+          'Not too much time has passed when ' + character.capitalize() + ' arrived to Ravnica called by the beacon. The streets are a mess, death is the ruler of all. Not so much time needs to pass for ' + character.capitalize() + ' encounters the first challenge. ' + NumberToString(predAct1) + ' was awaiting to fight with everything. \n' +
+          'Act 2 \n' +
+          character.capitalize() + ' manage to overcome the first challenge. But while entering to the center of the city fiercer becomes the battles. Tired and with some wounds ' + character.capitalize() + ' encounters one more challenge that keeps the final fight await a little longer. ' + NumberToString(predAct2) + ' awaits peacefully and ready to defend the mastermind of the disaster in Ravnica. \n' +
+          'Act 3 \n' +
+          'While the end is near, ' + character.capitalize() + ' finally finds and challenge the leader of the enemy’s army ' + NumberToString(predAct3) + '. While the fight becomes more fierce and deadly ' + character.capitalize() + ' knows that the only way to stop the invasion is sacrificing himself. Our hero gave his life to deliver peace to Ravnica.' 
+        )
 elif story == 'white':
-    print("White Story With Model")
+    print('Act 1 \n' +
+          'And so ' + character.capitalize() + ' enters the plane of Ravnica called by the beacon and ' +  character.capitalize() + ' notices that everyone is trapped and that there is an army of zombies attacking the city and slaying everything in their path. As ' + character.capitalize() + ' advance through the city, sees a figure helping in the fight. It happens to be ' + NumberToString(predAct1) + ' and they start to fight together. \n' +
+          'Act 2 \n' +
+          'While ' + character.capitalize() + ' continues the fight on the streets of Ravnica it encounters a new Ally ' + NumberToString(predAct2) + '. Together with many other planewalkers, they start to organize a counterattack against the enemy searching for their most vital elements and fighting with even dead gods brought back to fight the most brave and valuable heroes. \n'
+          'Act 3 \n' +
+          'The battle becomes fierce and it is coming to an end. With the help of ' + NumberToString(predAct3) + ', ' + character.capitalize() + ' is capable of drive back the main commander of the enemy forces. At end the battle is won and ' + character.capitalize() + ' manage to deliver back light and order.'
+        )
 elif story == 'green':
     print("Green Story With Model")
 elif story == 'blue':

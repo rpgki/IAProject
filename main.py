@@ -190,19 +190,19 @@ act3 = random.randint(0,1)
 
 # A function is defined to determine the ally in different acts
 def Ally(act=''):
-    if story == 'white' & (act == 'Acto 1' | act == 'Acto 2' | act == 'Acto 3'):
+    if story == 'white' and (act == 'Acto 1' or act == 'Acto 2' or act == 'Acto 3'):
         ally = 1
-    elif story == 'blue' & (act == 'Acto 1' | act == 'Acto 2' | act == 'Acto 3'):
+    elif story == 'blue' and (act == 'Acto 1' or act == 'Acto 2' or act == 'Acto 3'):
         ally = 1
-    elif story == 'black' & (act == 'Acto 1' | act == 'Acto 2' | act == 'Acto 3'):
+    elif story == 'black' and (act == 'Acto 1' or act == 'Acto 2' or act == 'Acto 3'):
         ally = 0
-    elif story == 'red' & (act == 'Acto 1' | act == 'Acto 3'):
+    elif story == 'red' and (act == 'Acto 1' or act == 'Acto 3'):
         ally = 1
-    elif story == 'red' & act == 'Acto 2 ':
+    elif story == 'red' and act == 'Acto 2':
         ally = 0
-    elif story == 'green' & act == 'Acto 1':
+    elif story == 'green' and act == 'Acto 1':
         ally = 1
-    elif story == 'green' & (act == 'Acto 2' | act == 'Acto 3'):
+    elif story == 'green' and (act == 'Acto 2' or act == 'Acto 3'):
         ally = 0
     return ally
 
@@ -220,52 +220,52 @@ elif story == 'blue':
 
 # Training the model
 clf = LogisticRegression(solver='sag', max_iter=100, random_state=42,
-                         multi_class='multinomial').fit(X,y)
+                         multi_class='multinomial').fit(X,Y)
 
 # The values to predict are saved
 Act1_X = {
-    'Character': StringToNumber(character)
-    ,'Act': 0
-    ,'Act 1': act1
-    ,'Act 2': act2
-    ,'Act 3': act3
-    ,'Allied': Ally('Acto 1')
-    ,'Red': red
-    ,'White': white
-    ,'Black': black
-    ,'Green': green
-    ,'Blue': blue
+    'Character': [StringToNumber(character)]
+    ,'Act': [0]    
+    ,'Act 1': [act1]
+    ,'Act 2': [act2]
+    ,'Act 3': [act3]
+    ,'Allied': [Ally('Acto 1')]
+    ,'Red': [red]
+    ,'White': [white]
+    ,'Black': [black]
+    ,'Green': [green]
+    ,'Blue': [blue]
 }
 
 Act2_X = {
-    'Character': StringToNumber(character)
-    ,'Act': 1
-    ,'Act 1': act1
-    ,'Act 2': act2
-    ,'Act 3': act3
-    ,'Allied': Ally('Acto 2')
-    ,'Red': red
-    ,'White': white
-    ,'Black': black
-    ,'Green': green
-    ,'Blue': blue
+    'Character': [StringToNumber(character)]
+    ,'Act': [1]
+    ,'Act 1': [act1]
+    ,'Act 2': [act2]
+    ,'Act 3': [act3]
+    ,'Allied': [Ally('Acto 2')]
+    ,'Red': [red]
+    ,'White': [white]
+    ,'Black': [black]
+    ,'Green': [green]
+    ,'Blue': [blue]
 }
 
 Act3_X = {
-    'Character': StringToNumber(character)
-    ,'Act': 2
-    ,'Act 1': act1
-    ,'Act 2': act2
-    ,'Act 3': act3
-    ,'Allied': Ally('Acto 3')
-    ,'Red': red
-    ,'White': white
-    ,'Black': black
-    ,'Green': green
-    ,'Blue': blue
+    'Character': [StringToNumber(character)]
+    ,'Act': [2]
+    ,'Act 1': [act1]
+    ,'Act 2': [act2]
+    ,'Act 3': [act3]
+    ,'Allied': [Ally('Acto 3')]
+    ,'Red': [red]
+    ,'White': [white]
+    ,'Black': [black]
+    ,'Green': [green]
+    ,'Blue': [blue]
 }
 
-Act1 = pd.DataFrame(data=Act1_X)
+Act1 = pd.DataFrame.from_dict(Act1_X)
 Act2 = pd.DataFrame(data=Act2_X)
 Act3 = pd.DataFrame(data=Act3_X)
 

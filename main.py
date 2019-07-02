@@ -302,6 +302,32 @@ elif story == 'white':
           'The battle becomes fierce and it is coming to an end. With the help of ' + NumberToString(predAct3) + ', ' + character.capitalize() + ' is capable of drive back the main commander of the enemy forces. At end the battle is won and ' + character.capitalize() + ' manage to deliver back light and order.'
         )
 elif story == 'green':
-    print("Green Story With Model")
+
+    print('Act 1 \n' + 
+
+          'When ' + character.capitalize() + 'arrives to Ravnica, as soon as the fight starts, the planewalker use all the might and Powe to defend the people of Ravnica. Just after the battle begins the planewalker encounters ' + NumberToString(predAct1) + ' and together star fighting back the invasion horde. \n' +
+
+          'Act 2 \n' + 
+
+          'With the help of allies, ' + character.capitalize() + ' advances through enemy’s lines, taking down generals and captains of the enemy’s army. ' + character.capitalize() + ' realize the urge to take down a specific group of enemies, so the planewalker works with ' + NumberToString(predAct2) + ' to achieve this goal. \n' + 
+
+          'Act 3 \n' + 
+
+          'As soon as ' + character.capitalize() + ' joins the rest of the allies to fight ' + NumberToString(predAct3) + ', the allied army growth strength to fight back enemy’s army and their resurrected world to finally take away all enemies from Ravnica. \n'
+         )
+
 elif story == 'blue':
-    print("Blue Story With Model")
+
+    print(
+        'Act 1 \n' + 
+
+        character.capitalize() + ' watches how the enemy advances through the city attacking the people and destroying homes and buldings. Together with ' + NumberToString(predAct1) + ' they manage a plan to reorganize the allies to fight bach the enemy’s army. \n' + 
+
+        'Act 2 \n' + 
+
+        'While the allies of ' + character.capitalize() + ' execute the plan there were another problem to take care of and it was the planar gate. With the help of ' + NumberToString(predAct2) + ', ' + character.capitalize() + ' manage to find the enemy responsible of bring the enemy’s army. \n' + 
+
+        'Act 3 \n' + 
+
+        'For a last mission to ' + character.capitalize() + ' manage to create a plan perfect to trap the enemy’s commander but the help of another planewalker was needed so ' + character.capitalize() + ' asks ' + NumberToString(predAct1) + ' to help each other. Finally, everything finished by attracting the commander to a trap created by ' + character.capitalize() 
+    )
